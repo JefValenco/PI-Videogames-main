@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+
+.contain {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  color: #6b75a8;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 800px;
+  height: 850px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card .backgroundEffect {
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+}
+
+@keyframes popBackground {
+  0% {
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  50% {
+    height: 80px;
+    border-top-left-radius: 75%;
+    border-top-right-radius: 75%;
+  }
+
+  75% {
+    height: 160px;
+    border-top-left-radius: 85%;
+    border-top-right-radius: 85%;
+  }
+
+  100% {
+    height: 320px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+}
+
+.card .pic {
+  position: relative;
+}
+
+.card .pic img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.card .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: #404770;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  transition: all ease;
+}
+
+.card .month {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.card .content {
+  padding: 0 20px;
+}
+
+.card .content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #1b9ce3;
+  border-radius: 25px;
+  font-size: 12px;
+  border: none;
+}
+
+.card:hover .content .foot .admin {
+  color: #fff;
+}
+
+.card .content .foot .icon {
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 12px;
+}
+p {
+  font-size: 12px;
+}
+h3 {
+  font-size: 12px;
+}
+
+.Submmit {
+  background: #404770;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.Submmit:hover {
+  background: #ffffff;
+  color: #404770;
+}
+
+.imageDetail {
+  border-radius: 20px;
+  border: 7px solid #ffffff;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader:after {
+  background-color: rgb(249, 249, 32);
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: coin-flip 8s cubic-bezier(0, 0.1, 0.1, 0.6) infinite;
+}
+
+@keyframes coin-flip {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+.Submmit {
+  background: #404770;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Submmit:hover {
+  background: #6b75a8;
+  color: rgb(255, 255, 255);
+}
+
+.label {
+  background: #404770;
+  border: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border-radius: 4px;
+  outline: none;
+  padding: 5px 15px;
+  margin: 5px;
+  width: 300px;
+}

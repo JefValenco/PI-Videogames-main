@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+
+.container {
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+.containerFilter {
+  padding-top: 50em;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding-right: 3em;
+}
+
+.box2 {
+  padding-right: 3em;
+}
+
+.style-dropdown {
+  background-color: #404770;
+  color: #ffffff;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  padding: 5px;
+  font-size: 1em;
+  padding-right: 4em;
+  margin-right: 4em;
+  margin-top: 9px;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader:after {
+  background-color: rgb(249, 249, 32);
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: coin-flip 8s cubic-bezier(0, 0.1, 0.1, 0.6) infinite;
+}
+
+@keyframes coin-flip {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+.btnPrimary {
+  background-color: #404770;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 17px;
+  line-height: 50px;
+  text-align: end;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: relative;
+}
+
+.btnPrimary:hover {
+  background-color: #ffffff;
+  color: #404770;
+}
+
+.h1 {
+  color: #ffffff;
+  font-size: 10em;
+  font-weight: bold;
+  font-family: "Roboto Black", sans-serif;
+  margin: 0%;
+  padding-bottom: 5px;
+}
+
+.p {
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Roboto Black", sans-serif;
+  margin: 0%;
+  padding-bottom: 0.1em;
+}
+
+.content2 {
+  background-color: #404770;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  padding-top: 50px;
+  padding-bottom: 12em;
+  /*  margin-bottom: 0.2em; */
+}
+
+.style-dropdown {
+  padding: 8px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.style-dropdown option {
+  font-size: 14px;
+}
+
+.linksNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-left: 3em;
+}
+
+.btnNav {
+  width: 220px;
+  border-radius: 30px;
+  color: #404770;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 17px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 3em;
+}
+
+.btnNav:hover {
+  background-color: #404770;
+  color: #ffffff;
+}
+
+.btnNav:active {
+  border: 3px solid #404770;
+}
+
+.toggler {
+  margin-left: 1em;
+}
+
+.p1 {
+  color: #435718;
+  font-size: 7em;
+  font-weight: bold;
+  font-family: "Roboto Black", sans-serif;
+  margin: 0%;
+  padding-bottom: 0.1em;
+}
+
+.p5 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin: 0%;
+  padding-bottom: 0.1em;
+}
+
+.h5 {
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin: 1em;
+}
+
+.footer {
+  background-color: #404770;
+  color: #ffffff;
+  padding-top: 2em;
+
+  justify-content: left;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #404770;
+  box-sizing: border-box;
+  transition: 0.2s;
+  outline: none;
+}
+
+.backToTop:hover {
+  background-color: #404770;
+}
+
+.imageSide {
+  width: 20px;
+  height: auto;
+}
+
+.imageBanner1 {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imageBanner2 {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imageWelcome {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imageCreate {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imageModify {
+  max-width: 100%;
+  max-height: auto;
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.imageWizard {
+  position: absolute;
+  bottom: 0em;
+  right: 0em;
+  z-index: 1;
+  max-width: 450px;
+  max-height: auto;
+  transform: scaleX(-1);
+  object-fit: cover;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+@media (max-width: 1300px) {
+  .containerFilter {
+    padding-top: 40em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 990px) {
+  .linksNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center elements vertically */
+    /* Adjust the height to your desired value */
+  }
+  .containerFilter {
+    padding-top: 35em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .containerFilter {
+    padding-top: 25em;
+    display: flex;
+    justify-content: center;
+  }
+}

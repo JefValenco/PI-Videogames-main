@@ -1,0 +1,88 @@
+.content {
+  height: 100%;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+.btnPrimary {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  color: #404770;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 17px;
+  line-height: 50px;
+  text-align: end;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: relative;
+}
+
+.btnPrimary:hover {
+  background-color: #404770;
+  color: #ffffff;
+}
+
+.h1 {
+  color: #ffffff;
+  font-size: 10em;
+  font-weight: bold;
+  font-family: "Roboto Black", sans-serif;
+  margin: 0%;
+  padding-bottom: 5px;
+  margin-bottom: 0.2em;
+}
+
+.p {
+  color: #949ed4;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Roboto Black", sans-serif;
+  margin: 0%;
+  padding-bottom: 0.1em;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader:after {
+  background-color: rgb(249, 249, 32);
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: coin-flip 8s cubic-bezier(0, 0.1, 0.1, 0.6) infinite;
+}
+
+@keyframes coin-flip {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
