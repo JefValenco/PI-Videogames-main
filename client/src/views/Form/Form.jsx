@@ -129,7 +129,7 @@ const Form = () => {
 
     // Send form data to server
     axios
-      .post("http://localhost:3005/videogame", form)
+      .post("/videogame", form)
       .then((res) => {
         alert("Videogame created!");
         resetForm();
@@ -141,7 +141,7 @@ const Form = () => {
   const submitHandlerDelete = (event) => {
     event.preventDefault();
     axios
-      .delete(`http://localhost:3005/videogame?name=${formDelete.name}`)
+      .delete(`/videogame?name=${formDelete.name}`)
       .then((res) => {
         alert("Videogame deleted!");
         resetFormDelete();

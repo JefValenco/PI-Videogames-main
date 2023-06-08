@@ -117,7 +117,7 @@ const Modify = () => {
 
     // Send formModify data to server
     axios
-      .put("http://localhost:3005/videogame", formModify)
+      .put("/videogame", formModify)
       .then((res) => {
         alert("Videogame updated!");
         resetFormModify();

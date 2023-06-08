@@ -15,7 +15,7 @@ export const FILTER_BY_CREATED = "FILTER_BY_CREATED";
 export function getVideogames() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3005/videogame`);
+      const response = await axios.get(`/videogame`);
       console.log("Response data:", response.data);
       dispatch({ type: GET_VIDEOGAMES, payload: response.data });
     } catch (error) {
@@ -27,7 +27,7 @@ export function getVideogames() {
 export function getGenre() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3005/genre`);
+      const response = await axios.get(`/genre`);
       console.log("Response data:", response.data);
       dispatch({ type: GET_GENRE, payload: response.data });
     } catch (error) {
@@ -39,7 +39,7 @@ export function getGenre() {
 export function getDeleteVideogames() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3005/videogame`);
+      const response = await axios.get(`/videogame`);
       const createdVideogames = response.data.filter(
         (videogame) => videogame.create
       );
@@ -53,7 +53,7 @@ export function getDeleteVideogames() {
 export function getModifyVideogames() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3005/videogame`);
+      const response = await axios.get(`/videogame`);
       const createdVideogames = response.data.filter(
         (videogame) => videogame.create
       );
@@ -67,7 +67,7 @@ export function getModifyVideogames() {
 export function getItemById(id) {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3005/videogame/${id}`);
+      const response = await axios.get(`/videogame/${id}`);
       dispatch({ type: GET_ITEM_BY_ID, payload: response.data });
     } catch (error) {
       dispatch({ type: GET_ITEM_BY_ID, payload: null });
@@ -78,9 +78,7 @@ export function getItemById(id) {
 export function getItemByName(payload) {
   return async function (dispatch) {
     try {
-      let response = await axios.get(
-        `http://localhost:3005/videogame?game=` + payload
-      );
+      let response = await axios.get(`/videogame?game=` + payload);
       return dispatch({
         type: GET_ITEM_BY_NAME,
         payload: response.data,
